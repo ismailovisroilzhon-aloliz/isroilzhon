@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Personal Academic Homepage | Isroilzhon</title>
+    <title>Isroilzhon Ismailov</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -314,6 +314,45 @@
             </div>
         </footer>
     </div>
+    
+    <!-- Support Button -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <button id="supportToggle"
+            class="w-14 h-14 rounded-full bg-primary text-white shadow-xl flex items-center justify-center hover:scale-105 transition">
+            <span class="material-symbols-outlined text-2xl">chat</span>
+        </button>
+    </div>
+
+    <!-- Support Panel -->
+    <div id="supportPanel"
+        class="fixed bottom-24 left-6 z-50 w-72 opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+        <div
+            class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-2xl p-5 flex flex-col gap-4">
+
+            <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500">
+                Support
+            </h4>
+
+            <a href="mailto:ismailov.isroilzhon@gmail.com"
+                class="flex items-center gap-3 text-sm hover:text-primary transition">
+                <span class="material-symbols-outlined">mail</span>
+                Email
+            </a>
+
+            <a href="https://t.me/isroilismailov" target="_blank"
+                class="flex items-center gap-3 text-sm hover:text-primary transition">
+                <span class="material-symbols-outlined">forum</span>
+                Telegram
+            </a>
+
+            <a href="https://www.instagram.com/isroilismailov_/" target="_blank"
+                class="flex items-center gap-3 text-sm hover:text-primary transition">
+                <span class="material-symbols-outlined">photo_camera</span>
+                Instagram
+            </a>
+
+        </div>
+    </div>
     <script>
         const toggleBtn = document.getElementById("contactToggle")
         const contactInfo = document.getElementById("contactInfo")
@@ -350,6 +389,16 @@
             }
         });
 
+        //support
+        const supportToggle = document.getElementById("supportToggle");
+        const supportPanel = document.getElementById("supportPanel");
+
+        supportToggle.addEventListener("click", () => {
+            supportPanel.classList.toggle("opacity-0");
+            supportPanel.classList.toggle("translate-y-4");
+            supportPanel.classList.toggle("pointer-events-none");
+        });
+
         document.addEventListener('contextmenu', e => e.preventDefault());
 
 
@@ -359,6 +408,7 @@
 
 
 </html>
+
 
 
 
